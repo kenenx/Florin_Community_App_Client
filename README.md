@@ -1,7 +1,7 @@
 # Florin_Community_App_ClientSide
 
 
- ##How to install the required libraries and Run the Server
+ ## How to install the required libraries and Run the Server
 
  - Open your terminal or command prompt.
  - Run the command "npm install" to install all the necessary dependencies.
