@@ -7,29 +7,58 @@
 }
 
 .navbar{
-    background: linear-gradient(#8e0000, #9198e500);
+    background: linear-gradient(#034732, #9198e500);
     
 }
 
-/* body{
-    background: linear-gradient(#3a0505, #a10707); 
-    background-color: rgb(76, 4, 4);
-} */
+body{
+    /* background: linear-gradient(#3a0505, #a10707);  */
+    background-color: rgb(187, 241, 188); 
+} 
+
+.items{
+    display: flex;
+    margin-top: 30px;
+}
 
 #eventbtn{
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border: 0;
-    background-color: purple;
+    background-color: #2978A0;
     font-size: 40px;
+    transform: rotate(-30deg);
+    filter: drop-shadow(0 4mm 1mm rgb(47, 31, 4));
+}
+#recyclebtn{
+    width: 220px;
+    height: 220px;
+    border: 0;
+    background-color:#034732;
+    font-size: 40px;
+    transform: rotate(0deg);
+    filter: drop-shadow(0 4mm 1mm rgb(47, 31, 4));
+}
+#complaintsbtn{
+    width: 220px;
+    height: 220px;
+    border: 0;
+    background-color: #A50104;
+    font-size: 40px;
+    transform: rotate(20deg);
+    filter: drop-shadow(0 4mm 1mm rgb(47, 31, 4));
+}
+
+.logo{
+    max-width: 120px;
+    margin: auto;
 }
 
 .noticeboard {
     display: grid;
-    /* grid-template-columns: auto auto auto; */
     padding: 10px;
     width: auto;
-    min-height: 300px;
+    min-height: 400px;
     background-color: rgb(118, 73, 13);
     box-shadow: inset 0 1mm 10px #442e05;
     border: 15px solid rgb(71, 40, 4); 
@@ -37,4 +66,7 @@
     justify-content: center;
     margin: auto;
     margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 } 
+
