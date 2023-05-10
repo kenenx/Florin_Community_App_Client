@@ -18,7 +18,7 @@ async function loadbinCollData() {
           'Authorization': localStorage.getItem("token")
       }
   }
-  const response = await fetch("http://localhost:3000/users/:id/bin", options);
+  const response = await fetch("https://florin-api.onrender.com/users/:id/bin", options);
 
   if (response.status == 200) {
       const data = await response.json();

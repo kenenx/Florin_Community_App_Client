@@ -46,7 +46,7 @@ document.getElementById("recycling-form").addEventListener("submit", async (e) =
         })
     }
 
-    const result = await fetch("http://localhost:3000/recycling", options);
+    const result = await fetch("https://florin-api.onrender.com/recycling", options);
 
     if (result.status == 201) {
         window.location.reload();
