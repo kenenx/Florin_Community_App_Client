@@ -1,4 +1,11 @@
-<<<<<<< HEAD
+@import url('./complaint.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .navbar{
     background: linear-gradient(#8e0000, #9198e500);
     
@@ -31,14 +38,3 @@
     margin: auto;
     margin-top: 50px;
 } 
-
-
-=======
-@import url('./complaint.css');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
->>>>>>> staging

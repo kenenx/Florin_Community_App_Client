@@ -29,9 +29,8 @@ async function loadbinCollData() {
       container.innerHTML = data.bin_coll;
   
   } else {
-      //window.location.assign("./index.html");
+      window.location.assign("./index.html");
   }
-
 }
 
 loadbinCollData();
