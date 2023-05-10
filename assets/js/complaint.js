@@ -1,3 +1,27 @@
+async function fetchUserToken() {
+  const options = {
+      method: 'GET',
+      headers: {
+          'Content-Type': 'application/json'
+      }
+  }
+  return new Promise((resolve, reject) => {
+  fetch(`https://florin-api.onrender.com/users/profile`, options)
+  .then(resp => resp.json())
+  .then(data => {
+      //console.log(data.user_id)
+      resolve(data.user_id) 
+  })
+  .catch(err => reject(err))
+})
+}
+
+fetchUserToken()
+  .then(data => {
+      console.log(data)
+  })
+  .catch(err => console.log(err))
+
 const form = document.getElementById('complaints-form')
 // const renderEntry = document.querySelector('.post div')
 
