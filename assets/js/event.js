@@ -1,3 +1,19 @@
+async function fetchUserToken() {
+    const options = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+    await fetch(`https://florin-api.onrender.com/users/profile`, options)
+    .then(resp => resp.json())
+    .then(data => {
+        console.log(data.user_id)
+    })
+    .catch(err => console.log(err))
+}
+fetchUserToken()
+
 async function fetchEvents() {
     const options = {
         method: 'GET',
@@ -8,7 +24,6 @@ async function fetchEvents() {
     await fetch(`https://florin-api.onrender.com/events`, options)
     .then(resp => resp.json())
     .then(data => {
-        console.log(data)
         data.sort((a,b) => (a.date > b.date ? 1 : -1))
 
         const title1Element = document.getElementById('event1')
@@ -35,5 +50,17 @@ async function fetchEvents() {
     })
     .catch(err => console.log(err))
 }
-
 fetchEvents()
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Check for username
+    if (username.value === '') {
+        alert("username must be present");
+    } if (password.value === '') {
+            alert("password must be present");}
+     else {
+        login();
+    }
+    
+})
