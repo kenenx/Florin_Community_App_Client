@@ -10,6 +10,7 @@ async function submitForm(event) {
     title: event.target.title.value,
     post_date: event.target.date.value,
     content: event.target.content.value,
+    user_id: parseInt(Math.floor(Math.random() * 10)),
   }
 
   const options = {

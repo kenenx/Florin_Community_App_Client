@@ -27,10 +27,6 @@ function createPostElement(data) {
   post.appendChild(button)
 
   button.dataset.id = data['recy_id']
-
-  button.setAttribute('data-bs-toggle', 'modal')
-  button.setAttribute('data-bs-target', '#exampleModal')
-  button.setAttribute('type', 'button')
   button.addEventListener('click', () => deleteRecycling(data['recy_id']))
 
   return post
@@ -88,24 +84,17 @@ async function loadRecPosts() {
   }
 }
 
-function deleteRecycling(id) {
-  const yesButton = document.querySelector('.yes-button')
-  const noButton = document.querySelector('.no-button')
-  yesButton.addEventListener('click', async () => {
-    const options = {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
-    const result = await fetch(`http://localhost:3000/recycling/${id}`, options)
-    if (result.status === 204) {
-      window.location.reload()
-    }
-  })
-  noButton.addEventListener('click', () => {
-    return
-  })
+async function deleteRecycling(id) {
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }
+  const result = await fetch(`http://localhost:3000/recycling/${id}`, options)
+  if (result.status === 204) {
+    window.location.reload()
+  }
 }
 
 loadRecPosts()
