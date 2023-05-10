@@ -35,10 +35,11 @@ async function loadbinCollData() {
           'Authorization': localStorage.getItem("token")
       }
   }
-  //make a function for this]
-  user_id =1; // <-
-  // bin colection day for user
-  const responseBin = await fetch(`http://localhost:3000/users/profile/${user_id}/bin`, options);
+
+ // const responseBin = await fetch(`http://localhost:3000/users/profile/${user_id}/bin`, options);
+
+  const response = await fetch(`https://florin-api.onrender.com/users/profile/${user_id}/bin`, options);
+
 
   if (responseBin.status == 200) {
       const data = await responseBin.json();

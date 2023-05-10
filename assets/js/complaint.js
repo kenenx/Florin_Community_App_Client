@@ -21,7 +21,7 @@ async function submitForm(event) {
   }
 
   console.log(add)
-  const result = await fetch('http://localhost:3000/complaints', options)
+  const result = await fetch('https://florin-api.onrender.com/complaints', options)
   console.log(result)
   if (result.status === 201) {
     event.target.title.value = ''

@@ -1,7 +1,7 @@
 const addPosts = document.getElementById('add-posts')
 
 async function viewComplaint() {
-  const response = await fetch('http://localhost:3000/complaints')
+  const response = await fetch('https://florin-api.onrender.com/complaints')
   const data = await response.json()
   console.log(data)
   renderData(data)
@@ -91,7 +91,7 @@ async function deletePost(id) {
       'Content-Type': 'application/json',
     },
   }
-  const result = await fetch(`http://localhost:3000/complaints/${id}`, options)
+  const result = await fetch(`https://florin-api.onrender.com/complaints/${id}`, options)
   if (result.status === 204) {
     window.location.reload()
   }
@@ -106,7 +106,7 @@ async function updateEntry(id, data) {
     body: JSON.stringify(data),
   }
   console.log(data)
-  const result = await fetch(`http://localhost:3000/complaints/${id}`, options)
+  const result = await fetch(`https://florin-api.onrender.com/complaints/${id}`, options)
   if (result.status === 200) {
     window.location.reload()
   }
