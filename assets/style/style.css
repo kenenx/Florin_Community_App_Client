@@ -10,10 +10,24 @@
     background: linear-gradient(#034732, #9198e500);
     
 }
-
+#complaints-form{
+    margin: auto;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}
+#comp_img{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+}
 body{
     /* background: linear-gradient(#3a0505, #a10707);  */
     background-color: rgb(187, 241, 188); 
+
 } 
 
 .items{
