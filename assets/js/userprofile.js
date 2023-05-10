@@ -18,13 +18,15 @@ async function loadbinCollData() {
           'Authorization': localStorage.getItem("token")
       }
   }
-  const response = await fetch("http://localhost:3000/users/:id/bin", options);
+  //make a function for this
+  user_id = 1; // <-
+  const response = await fetch(`http://localhost:3000/users/profile/${user_id}/bin`, options);
 
   if (response.status == 200) {
       const data = await response.json();
       const container = document.getElementById("bininfo");
-      console.log(data.bin_id)
-      container.innerHTML = data.bin_id;
+      console.log(data.bin_coll)
+      container.innerHTML = data.bin_coll;
   
   } else {
       //window.location.assign("./index.html");
