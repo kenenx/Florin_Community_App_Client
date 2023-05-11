@@ -16,7 +16,6 @@ async function fetchUserToken() {
     .catch(err => console.log(err))
 }
 
-console.log(fetchUserToken())
 
 
 async function fetchEvents() {
