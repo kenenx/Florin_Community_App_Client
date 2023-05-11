@@ -1,62 +1,62 @@
-h1{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+h1 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
-em{
-    display: flex;
-    justify-content: center;
-}
-
-form{
-    display: grid;
-    justify-content: center;
-    align-items: center;
+em {
+  display: flex;
+  justify-content: center;
 }
 
-#recyclingdates{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(#98a24d79,#c6d36573);
-    margin: auto;
-    margin-left: 100px;
-    margin-right: 100px;
+form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
-#recycling-form{
-    margin-top: 30px;
+#recyclingdates {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#98a24d79, #c6d36573);
+  margin: auto;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
-.row{
-    margin-top: 30px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#recycling-form {
+  margin-top: 30px;
 }
-#one{
-    /* display: grid; */
-    /* flex-direction: row; */
-    height: 200px;
-    width: 300px;
-    background: linear-gradient(#98a24d79,#c6d36573);
-    margin-right: 15px;
+
+.row {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#two{
-    /* display: grid; */
-    /* flex-direction: row; */
-    height: 200px;
-    width: 300px;
-    background: linear-gradient(#98a24d79,#c6d36573);
-    margin-right: 15px;
+#one {
+  /* display: grid; */
+  /* flex-direction: row; */
+  height: 200px;
+  width: 300px;
+  background: linear-gradient(#98a24d79, #c6d36573);
+  margin-right: 15px;
 }
-#three{
-    /* display: grid; */
-    /* flex-direction: row; */
-    height: 200px;
-    width: 300px;
-    background: linear-gradient(#98a24d79,#c6d36573);
+#two {
+  /* display: grid; */
+  /* flex-direction: row; */
+  height: 200px;
+  width: 300px;
+  background: linear-gradient(#98a24d79, #c6d36573);
+  margin-right: 15px;
+}
+#three {
+  /* display: grid; */
+  /* flex-direction: row; */
+  height: 200px;
+  width: 300px;
+  background: linear-gradient(#98a24d79, #c6d36573);
 }
 #recy_show{
     margin-top: 20px;

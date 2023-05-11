@@ -1,47 +1,48 @@
 /////////////////////////////////////////////////////////////////
 async function fetchUserToken() {
   const options = {
-      method: 'GET',
-      headers: {
-          'Content-Type': 'application/json'
-      }
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
   }
-  fetch(`https://florin-api.onrender.com/users/profile`, 
-  )
-  .then(resp => resp.json())
-  .then(data => {
+  fetch(`https://florin-api.onrender.com/users/profile`)
+    .then((resp) => resp.json())
+    .then((data) => {
       userToken = data
-  })
-  .then(() => {
+    })
+    .then(() => {
       localStorage.setItem('userToken', userToken.user_id)
-      console.log(userToken.user_id);
-  })
-  .catch(err => console.log(err))
+      console.log(userToken.user_id)
+    })
+    .catch((err) => console.log(err))
 }
 fetchUserToken()
-
 
 console.log(fetchUserToken())
 
 /////////////////////////////////////////////////////////////////
 //user displayed info
-async function userprofileinfo(){
+async function userprofileinfo() {
   user_id = parseInt(localStorage.getItem('userToken'))
   const options = {
     headers: {
-        'Authorization': localStorage.getItem("token")
-    }
-}
-  const response= await fetch(`https://florin-api.onrender.com/users/profile/${user_id}`, options);
+      Authorization: localStorage.getItem('token'),
+    },
+  }
+  const response = await fetch(
+    `https://florin-api.onrender.com/users/profile/${user_id}`,
+    options
+  )
 
   if (response.status == 200) {
-    const data = await response.json();
-    const container = document.getElementById("userInfo");
+    const data = await response.json()
+    const container = document.getElementById('userInfo')
     console.log(data)
-    const name = document.createElement("h2");
-    name.innerHTML = data.username;
+    const name = document.createElement('h2')
+    name.innerHTML = data.username
     container.appendChild(name)
-    const email = document.createElement("h3")
+    const email = document.createElement('h3')
     email.textContent = data.user_email
     container.appendChild(email)
     console.log(container)
@@ -127,7 +128,9 @@ loadComplaints()
 async function loadEvents() {
   try {
     let user_id = parseInt(localStorage.getItem('userToken'))
-    const response = await fetch(`https://florin-api.onrender.com/users/events/${user_id}`)
+    const response = await fetch(
+      `https://florin-api.onrender.com/users/events/${user_id}`
+    )
     const data = await response.json()
     console.log(data)
     renderEvents(data)
@@ -158,4 +161,3 @@ function renderEvents(data) {
   })
 }
 loadEvents()
-

@@ -2,6 +2,8 @@
 @import url('./welcomepage.css');
 @import url('./mainpage.css');
 @import url('./login.css');
+@import url('./post.css');
+@import url('./event.css');
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=League+Spartan:wght@500;900&display=swap');
 * {
   margin: 0;
@@ -10,8 +12,8 @@
   font-family: 'Kalam', cursive;
   font-family: 'League Spartan', sans-serif;
 }
-body{
- background-color: #f3f3f3;
+body {
+  background-color: #f3f3f3;
 }
 .navbar {
   background: linear-gradient(#98a24d, #c7d165);
@@ -44,4 +46,3 @@ body{
   color: #ffffff;
   border: 1px solid #ffffff;
 }
-
