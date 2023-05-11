@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "jest-fetch-mock": "^3.0.3",
     "live-server": "^1.2.2"
   },
   "scripts": {
@@ -7,7 +8,6 @@
     "test": "jest --watchAll",
     "coverage": "jest --coverage"
   },
-  
   "name": "florin_community_app_client",
   "description": "",
   "version": "1.0.0",

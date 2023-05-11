@@ -22,12 +22,12 @@ console.log(fetchUserToken())
 //user displayed info
 async function userprofileinfo(){
   user_id = 1
-  const options = {
-    headers: {
-        'Authorization': localStorage.getItem("token")
-    }
-}
-  const response= await fetch(`http://localhost:3000/users/profile/${user_id}`, options);
+  // const options = {
+  //   headers: {
+  //       'Authorization': localStorage.getItem("token")
+  //   }
+  // }
+  const response= await fetch(`http://localhost:3000/users/profile/${user_id}`,);
 
   if (response.status == 200) {
     const data = await response.json();
@@ -49,15 +49,15 @@ userprofileinfo()
 ////////////////////////////////////////////////////////////////
 async function loadbinCollData() {
 
-  const options = {
-      headers: {
-          'Authorization': localStorage.getItem("token")
-      }
-  }
+  // const options = {
+  //     headers: {
+  //         'Authorization': localStorage.getItem("token")
+  //     }
+  // }
 
  // const responseBin = await fetch(`http://localhost:3000/users/profile/${user_id}/bin`, options);
 
-  const response = await fetch(`https://florin-api.onrender.com/users/profile/${user_id}/bin`, options);
+  const response = await fetch(`https://florin-api.onrender.com/users/profile/${user_id}/bin`);
 
 
   if (responseBin.status == 200) {
@@ -74,4 +74,5 @@ async function loadbinCollData() {
 loadbinCollData();
 
 ///////////////////////////////////////////////////////////////////
-//complants 
+//for testin
+///////////////////////////////
