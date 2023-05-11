@@ -84,7 +84,7 @@ async function renderUserToken1() {
     const userToken = await fetchUserToken();
 
     const addEvent = document.getElementById('event-btn1')
-    addEvent.addEventListener('click', submitForm)
+    await addEvent.addEventListener('click', submitForm)
 
     async function submitForm() {
     // event.preventDefault()
@@ -116,7 +116,7 @@ async function renderUserToken2() {
     const userToken = await fetchUserToken();
 
     const addEvent = document.getElementById('event-btn2')
-    addEvent.addEventListener('click', submitForm)
+    await addEvent.addEventListener('click', submitForm)
 
     async function submitForm() {
     // event.preventDefault()
