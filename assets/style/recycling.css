@@ -18,7 +18,6 @@ form{
     display: grid;
     justify-content: center;
     align-items: center;
-    background-color: rgb(209, 20, 20);
     background: linear-gradient(#98a24d79,#c6d36573);
     margin: auto;
     margin-left: 100px;
@@ -26,31 +25,36 @@ form{
 }
 
 #recycling-form{
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
-#rows{
-    display: grid;
-    flex-direction:column;
+.row{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #one{
     /* display: grid; */
     /* flex-direction: row; */
-    height: 100px;
+    height: 200px;
     width: 300px;
-    background-color: azure;
+    background: linear-gradient(#98a24d79,#c6d36573);
+    margin-right: 15px;
 }
 #two{
     /* display: grid; */
     /* flex-direction: row; */
-    height: 100px;
+    height: 200px;
     width: 300px;
-    background-color: aquamarine;
+    background: linear-gradient(#98a24d79,#c6d36573);
+    margin-right: 15px;
 }
 #three{
     /* display: grid; */
     /* flex-direction: row; */
-    height: 100px;
+    height: 200px;
     width: 300px;
-    background-color: blue;
+    background: linear-gradient(#98a24d79,#c6d36573);
 }
