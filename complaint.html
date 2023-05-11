@@ -46,16 +46,19 @@
             <li class="nav-item-userprofile">
               <a class="nav-link" href="./userprofile.html">Profile</a>
             </li>
+            <li class="nav-item-userprofile">
+              <a class="nav-link" href="./index.html">Log Out</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-
+    <h1 class="report">Report an Issue</h1>
     <form id="complaints-form" action="post">
       <div class="date-picker">
         <label for="date" class="form-label content">Date:</label>
         <input
-          type="text"
+          type="date"
           class="form-control"
           id="date"
           aria-describedby="date"
@@ -83,7 +86,7 @@
       </div>
       <div class="btn-post-container">
         <button type="submit" class="button">Submit</button>
-        <button type="submit" class="button">
+        <button class="button2">
           <a href="./post.html" class="view-complaints">View Complaints</a>
         </button>
       </div>

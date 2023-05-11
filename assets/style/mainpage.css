@@ -66,8 +66,31 @@
   justify-content: center;
   margin: auto;
   margin-top: 120px;
-
+  animation: fadeIn 1.5s ease-in-out forwards;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#eventbtn:hover {
+  background-color: rgb(41, 120, 160, 0.7);
+}
+#recyclebtn:hover {
+  background-color: rgb(3, 71, 50, 0.7);
+}
+#complaintsbtn:hover {
+  background-color: rgb(165, 1, 4, 0.7);
+}
+#eventbtn,
+#recyclebtn,
+#complaintsbtn {
+  transition: 0.7s ease-in-out;
 }

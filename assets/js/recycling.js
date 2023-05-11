@@ -2,29 +2,38 @@ function createPostElement(data) {
   const post = document.createElement('div')
   post.className = 'post'
 
-  const header = document.createElement('h2')
-  header.textContent = data['recy_title']
+  const date = document.createElement('p')
+  date.textContent = `Date: ${data['post_date']}`
+  post.appendChild(date)
+
+  const header = document.createElement('p')
+  header.textContent = `Title: ${data['recy_title']}`
   post.appendChild(header)
 
   const type = document.createElement('p')
-  type.textContent = data['recy_type']
+  type.textContent = `Type: ${data['recy_type']}`
   post.appendChild(type)
 
-  const date = document.createElement('h3')
-  date.textContent = data['post_date']
-  post.appendChild(date)
-
   const content = document.createElement('p')
-  content.textContent = data['info']
+  content.textContent = `Details: ${data['info']}`
   post.appendChild(content)
 
   const img = document.createElement('img')
   img.src = data['img']
   post.appendChild(img)
 
+  img.classList.add('image-recy')
+
   const button = document.createElement('button')
   button.textContent = 'Delete'
   post.appendChild(button)
+
+  post.classList.add('post-container-recy')
+  button.classList.add('delete-button2')
+
+  button.setAttribute('data-bs-toggle', 'modal')
+  button.setAttribute('data-bs-target', '#exampleModal')
+  button.setAttribute('type', 'button')
 
   button.dataset.id = data['recy_id']
   button.addEventListener('click', () => deleteRecycling(data['recy_id']))
@@ -91,19 +100,26 @@ async function loadRecPosts() {
 }
 
 async function deleteRecycling(id) {
-  const options = {
-    method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  }
-  const result = await fetch(
-    `https://florin-api.onrender.com/recycling/${id}`,
-    options
-  )
-  if (result.status === 204) {
-    window.location.reload()
-  }
+  const yesButton = document.querySelector('.yes-button')
+  const noButton = document.querySelector('.no-button')
+  yesButton.addEventListener('click', async () => {
+    const options = {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+    const result = await fetch(
+      `https://florin-api.onrender.com/recycling/${id}`,
+      options
+    )
+    if (result.status === 204) {
+      window.location.reload()
+    }
+  })
+  noButton.addEventListener('click', () => {
+    return
+  })
 }
 
 loadRecPosts()

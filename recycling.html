@@ -53,6 +53,9 @@
             <li class="nav-item-userprofile">
               <a class="nav-link" href="./userprofile.html">Profile</a>
             </li>
+            <li class="nav-item-userprofile">
+              <a class="nav-link" href="./index.html">Log Out</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -62,69 +65,99 @@
       <em>Florinbook marketplace</em>
     </header>
     <hr />
-    <main>  
+    <main>
       <section id="recyclingdates">
-        <p id ='p'>Remember to take out your recycling and general waste the night before your bin colection day to avoid disappointment</p>
-      </section>  
-      <section class = 'row align-items-center'>
-        <div id ='one'>
-          <div id = 'recy_show'>
+        <p id="p">
+          Remember to take out your recycling and general waste the night before
+          your bin colection day to avoid disappointment
+        </p>
+      </section>
+      <section class="row align-items-center">
+        <div id="one">
+          <div id="recy_show">
             <h4>Old table for a good home</h4>
             <h5>20-04-2023</h5>
             <em>wood</em>
-            <p>Missing a leg but is still good, could easily go in the corner</p>
+            <p>
+              Missing a leg but is still good, could easily go in the corner
+            </p>
           </div>
         </div>
-        <div id ='two'> 
-          <div id = 'recy_show'>
+        <div id="two">
+          <div id="recy_show">
             <h4>Hamper chair, not used</h4>
             <h5>25-04-2023</h5>
             <em>plastic</em>
-            <p>Very good condition, I never used it so would like to not just throw it away</p>
+            <p>
+              Very good condition, I never used it so would like to not just
+              throw it away
+            </p>
           </div>
         </div>
-        <div id ='three'> 
-          <div id = 'recy_show'>
+        <div id="three">
+          <div id="recy_show">
             <h4>Sofa worn but still good</h4>
             <h5>29-04-2023</h5>
             <em>other</em>
-            <p>Still has a good few years left in it, great for any home! Just not mine</p>
+            <p>
+              Still has a good few years left in it, great for any home! Just
+              not mine
+            </p>
           </div>
         </div>
       </section>
-        </div>
-      </div>
-      <hr/>
-       
-      <!-- recycling posts-->
-      <form id="recycling-form" action="post"> 
-        <h3 style="display: flex; justify-content: center;">List your own</h3>
+
+      <hr />
+      <hr />
+
+      <form id="recycling-form" action="https://example.com/submit-form">
+        <h3 style="display: flex; justify-content: center">List your own</h3>
         <div class="date-picker">
-          <label for="post_date" class="post_date form-label content" >Date:</label>
+          <label for="post_date" class="post_date form-label content"
+            >Date:</label
+          >
           <input
-            type="post_date"
+            type="date"
             class="form-control"
             id="post_date"
             aria-describedby="date"
-            name="post_date" required
+            name="post_date"
+            required
           />
         </div>
-        <label for="title" class="title form-label form-title" style="display: flex; justify-content: left; padding: 0; margin-bottom: 0; margin-top: 10px;">Title:</label>
+        <label
+          for="title"
+          class="title form-label form-title"
+          style="
+            display: flex;
+            justify-content: left;
+            padding: 0;
+            margin-bottom: 0;
+            margin-top: 10px;
+            font-size: 30px;
+          "
+          >Title:</label
+        >
         <input
-          type="title"
+          type="text"
           class="form-control"
           id="title"
           aria-describedby="title"
-          name ="title" required
+          name="title"
+          required
+          style="border: none"
         />
-        <label for="recy_type" class="recy_type form-label form-title">Type:</label>
+        <label for="recy_type" class="recy_type form-label form-title"
+          >Type:</label
+        >
         <input
-          list = "recy_type"
+          list="recy_types"
           type="text"
           class="form-control"
           id="recy_type"
-          name ="recy_type"
-          aria-describedby="recy_type" required
+          name="recy_type"
+          aria-describedby="recy_type"
+          required
         />
         <datalist id="recy_types">
           <option value="plastic"></option>
@@ -141,23 +174,57 @@
             id="info"
             class="form-control"
             type="text"
-            name="textbox" required
+            name="info"
+            required
+          ></textarea>
+          <label
+            for="img"
+            class="img form-label form-title"
+            style="padding-top: 10px"
+            >Image link:</label
           >
-          </textarea>
-          <label for="img" class="img form-label form-title">img link:</label>
           <input
             type="text"
             class="form-control"
             id="img"
             name="img"
-            aria-describedby="title"
+            aria-describedby="img"
           />
         </div>
-        <div class="btn-post-container" style=" display: flex; justify-content: center; align-items: center;">
-          <button id = 'submit' type="submit" class="button" value="Post">Post</button>
-        </div>
+        <input type="submit" value="Post" class="recy-button" />
       </form>
-      <div class="recycling" id="recy_posts"></div>
+      <div class="recycling" id="recy_posts" class="recy-button"></div>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to delete the post?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="yes-button" data-bs-dismiss="modal">
+                Yes
+              </button>
+              <button type="button" class="no-button" data-bs-dismiss="modal">
+                No
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

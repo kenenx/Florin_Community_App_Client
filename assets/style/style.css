@@ -36,7 +36,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-left: 30%;
+  margin-left: 2%;
 }
 .navbar-nav:hover.nav-link:hover {
   transform: scale(1);
