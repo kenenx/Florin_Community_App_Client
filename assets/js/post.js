@@ -9,7 +9,6 @@ async function viewComplaint() {
   } catch (error) {
     console.log(error)
   }
-
 }
 
 function renderData(data) {
@@ -25,20 +24,29 @@ function renderData(data) {
     const writeTitle = document.createElement('p')
     const writeContent = document.createElement('p')
 
-    writeDate.textContent = 'Date:'
-    writeTitle.textContent = 'Title:'
-    writeContent.textContent = 'Details:'
+    postInfo.classList.add('post-container')
+
+    // writeDate.textContent = 'Date:'
+    // writeTitle.textContent = 'Title:'
+    // writeContent.textContent = 'Details:'
 
     const buttonContainer = document.createElement('div')
     const editButton = document.createElement('button')
     const deleteButton = document.createElement('button')
 
-    postDate.textContent = `${post_date}`
-    postTitle.textContent = `${title}`
-    postContent.textContent = `${content}`
+    postDate.textContent = ` Date: ${post_date}`
+    postTitle.textContent = ` Title: ${title}`
+    postContent.textContent = `Details: ${content}`
 
     editButton.textContent = 'Edit'
+
     deleteButton.textContent = 'Delete'
+
+    editButton.style.textAlign = 'center'
+    deleteButton.style.textAlign = 'center'
+    editButton.classList.add('edit-button')
+    deleteButton.classList.add('delete-button')
+    buttonContainer.classList.add('button-container')
 
     deleteButton.setAttribute('data-bs-toggle', 'modal')
     deleteButton.setAttribute('data-bs-target', '#exampleModal')
@@ -65,11 +73,17 @@ function renderData(data) {
       updateButton.textContent = 'Update'
       buttonContainer.appendChild(updateButton)
 
+      updateButton.classList.add('update-button')
+
       const inputContainer = document.createElement('div')
 
       const inputDate = document.createElement('input')
       const inputTitle = document.createElement('input')
-      const inputContent = document.createElement('input')
+      const inputContent = document.createElement('textarea')
+
+      inputDate.classList.add('input-date')
+      inputTitle.classList.add('input-title')
+      inputContent.classList.add('input-content')
 
       const writeDate2 = document.createElement('p')
       const writeTitle2 = document.createElement('p')
@@ -79,9 +93,9 @@ function renderData(data) {
       writeTitle2.textContent = 'Title:'
       writeContent2.textContent = 'Details:'
 
-      inputDate.value = postDate.textContent
-      inputTitle.value = postTitle.textContent
-      inputContent.value = postContent.textContent
+      inputDate.value = ''
+      inputTitle.value = ''
+      inputContent.value = ''
 
       inputContainer.appendChild(writeDate2)
       inputContainer.appendChild(inputDate)
@@ -89,6 +103,8 @@ function renderData(data) {
       inputContainer.appendChild(inputTitle)
       inputContainer.appendChild(writeContent2)
       inputContainer.appendChild(inputContent)
+
+      inputContainer.classList.add('input-container')
 
       inputDate.type = 'text'
       inputTitle.type = 'text'
@@ -115,7 +131,6 @@ function renderData(data) {
 }
 
 async function deletePost(id) {
-
   const yesButton = document.querySelector('.yes-button')
   const noButton = document.querySelector('.no-button')
   yesButton.addEventListener('click', async () => {
@@ -160,7 +175,6 @@ async function updateEntry(id, data) {
   no2Button.addEventListener('click', () => {
     return
   })
-
 }
 
 viewComplaint()
