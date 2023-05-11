@@ -53,7 +53,7 @@ document
       }),
     }
 
-    const result = await fetch('http://localhost:3000/recycling', options)
+    const result = await fetch('https://florin-api.onrender.com/recycling', options)
 
     if (result.status === 201) {
       window.location.reload()
@@ -68,7 +68,7 @@ async function loadRecPosts() {
       Authorization: localStorage.getItem('token'),
     },
   }
-  const response = await fetch('http://localhost:3000/recycling', options)
+  const response = await fetch('https://florin-api.onrender.com/recycling', options)
   if (response.status === 200) {
     const posts = await response.json()
 
@@ -91,7 +91,7 @@ async function deleteRecycling(id) {
       'Content-Type': 'application/json',
     },
   }
-  const result = await fetch(`http://localhost:3000/recycling/${id}`, options)
+  const result = await fetch(`https://florin-api.onrender.com/recycling/${id}`, options)
   if (result.status === 204) {
     window.location.reload()
   }

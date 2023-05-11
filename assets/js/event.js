@@ -1,4 +1,26 @@
+async function fetchUserToken() {
+    const options = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+    fetch(`https://florin-api.onrender.com/users/profile`, options)
+    .then(resp => resp.json())
+    .then(data => {
+        userToken = data
+    })
+    .then(() => {
+        console.log(userToken.user_id);
+    })
+    .catch(err => console.log(err))
+}
+
+console.log(fetchUserToken())
+
+
 async function fetchEvents() {
+
   const options = {
     method: 'GET',
     headers: {
@@ -9,6 +31,7 @@ async function fetchEvents() {
     .then((resp) => resp.json())
     .then((data) => {
       data.sort((a, b) => (a.date > b.date ? 1 : -1))
+
 
       const title1Element = document.getElementById('event1')
       const date1Element = document.getElementById('date1')

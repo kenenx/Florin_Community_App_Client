@@ -8,4 +8,5 @@ function goToEveData() {
 
 function goToComData() {
   window.location.assign('complaint.html')
+
 }

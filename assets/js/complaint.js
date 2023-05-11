@@ -1,3 +1,23 @@
+async function fetchUserToken() {
+  const options = {
+      method: 'GET',
+      headers: {
+          'Content-Type': 'application/json'
+      }
+  }
+  fetch(`https://florin-api.onrender.com/users/profile`, options)
+  .then(resp => resp.json())
+  .then(data => {
+      userToken = data
+  })
+  .then(() => {
+      console.log(userToken.user_id);
+  })
+  .catch(err => console.log(err))
+}
+
+console.log(fetchUserToken())
+
 const form = document.getElementById('complaints-form')
 
 form.addEventListener('submit', submitForm)
@@ -23,8 +43,9 @@ async function submitForm(event) {
     },
     body: JSON.stringify(add),
   }
+
   try {
-    const result = await fetch('http://localhost:3000/complaints', options)
+    const result = await fetch('https://florin-api.onrender.com/complaints', options)
     console.log(result)
     if (result.status === 201) {
       event.target.title.value = ''
@@ -37,6 +58,7 @@ async function submitForm(event) {
   } finally {
     // Re-enable the submit button
     submitButton.disabled = false
+
   }
 }
 

@@ -2,13 +2,14 @@ const addPosts = document.getElementById('add-posts')
 
 async function viewComplaint() {
   try {
-    const response = await fetch('http://localhost:3000/complaints')
+    const response = await fetch('https://florin-api.onrender.com/complaints')
     const data = await response.json()
     console.log(data)
     renderData(data)
   } catch (error) {
     console.log(error)
   }
+
 }
 
 function renderData(data) {
@@ -114,6 +115,7 @@ function renderData(data) {
 }
 
 async function deletePost(id) {
+
   const yesButton = document.querySelector('.yes-button')
   const noButton = document.querySelector('.no-button')
   yesButton.addEventListener('click', async () => {
@@ -124,7 +126,7 @@ async function deletePost(id) {
       },
     }
     const result = await fetch(
-      `http://localhost:3000/complaints/${id}`,
+      `https://florin-api.onrender.com/complaints/${id}`,
       options
     )
     if (result.status === 204) {
@@ -148,7 +150,7 @@ async function updateEntry(id, data) {
       body: JSON.stringify(data),
     }
     const result = await fetch(
-      `http://localhost:3000/complaints/${id}`,
+      `https://florin-api.onrender.com/complaints/${id}`,
       options
     )
     if (result.status === 200) {
@@ -158,6 +160,7 @@ async function updateEntry(id, data) {
   no2Button.addEventListener('click', () => {
     return
   })
+
 }
 
 viewComplaint()

@@ -15,7 +15,9 @@
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Frolin Council</a>
+              <a class="navbar-brand" href="#">
+                <img class ="logo" src ="./assets/images/florinLogo.png"> 
+              </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -39,12 +41,20 @@
           </nav>
         <!-- Noticeboard -->
         <section class ="noticeboard">
-            <section class = "items">
-              <button type="button"id ="eventbtn" class="btn btn-primary" type="submit" value="Submit" onclick="goToEveData()">Events</button>
-              <button type="button"id ="recyclebtn" class="btn btn-primary" type="submit" value="Submit" onclick="goToRecData()">Recycling</button>
-              <button type="button"id ="complaintsbtn" class="btn btn-primary" type="submit" value="Submit" onclick="goToComData()">Complaints</button>
-            </section>  
+          <section class = "pics">            
           </section>
+          <section class = "items">
+            <div class ="evePlace">
+              <button type="button" id ="eventbtn" class="btn btn-primary" type="submit" value="Submit" onclick="goToEveData()">Events</button>
+            </div>
+            <div class ="recPlace">
+                <button type="button" id ="recyclebtn" class="btn btn-primary" type="submit" value="Submit" onclick="goToRecData()">Recycling</button>
+            </div>
+            <div class ="compPlace">
+              <button type="button" id ="complaintsbtn" class="btn btn-primary" type="submit" value="Submit" onclick="goToComData()">Complaints</button>
+            </div>
+          </section>  
+        </section>
         
     </body>
 </html>
