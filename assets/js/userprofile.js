@@ -1,3 +1,4 @@
+/////////////////////////////////////////////////////////////////
 async function fetchUserToken() {
   const options = {
       method: 'GET',
@@ -17,7 +18,6 @@ async function fetchUserToken() {
 }
 
 console.log(fetchUserToken())
-
 /////////////////////////////////////////////////////////////////
 //user displayed info
 async function userprofileinfo(){
@@ -27,7 +27,7 @@ async function userprofileinfo(){
         'Authorization': localStorage.getItem("token")
     }
 }
-  const response= await fetch(`http://localhost:3000/users/profile/${user_id}`, options);
+  const response= await fetch(`https://florin-api.onrender.com/users/profile/${user_id}`, options);
 
   if (response.status == 200) {
     const data = await response.json();
@@ -41,37 +41,80 @@ async function userprofileinfo(){
     container.appendChild(email)
     console.log(container)
   }
-  
 }
 
 userprofileinfo()
 
 ////////////////////////////////////////////////////////////////
 async function loadbinCollData() {
-
   const options = {
-      headers: {
-          'Authorization': localStorage.getItem("token")
-      }
+    headers: {
+      Authorization: localStorage.getItem('token'),
+    },
   }
 
- // const responseBin = await fetch(`http://localhost:3000/users/profile/${user_id}/bin`, options);
+  const responseBin = await fetch(
+    `https://florin-api.onrender.com/users/profile/${user_id}/bin`,
+    options
+  )
 
-  const response = await fetch(`https://florin-api.onrender.com/users/profile/${user_id}/bin`, options);
-
+  // const response = await fetch(
+  //   `https://florin-api.onrender.com/users/profile/${user_id}/bin`,
+  //   options
+  // )
 
   if (responseBin.status == 200) {
-      const data = await responseBin.json();
-      const container = document.getElementById("bininfo");
-      console.log(data.bin_coll)
-      container.innerHTML = data.bin_coll;
-  
+    const data = await responseBin.json()
+    const container = document.getElementById('bininfo')
+    console.log(data.bin_coll)
+    container.innerHTML = data.bin_coll
   } else {
-     // window.location.assign("./index.html");
+    // window.location.assign("./index.html");
   }
 }
 
-loadbinCollData();
+loadbinCollData()
 
 ///////////////////////////////////////////////////////////////////
-//complants 
+//complants
+async function loadComplaints() {
+  const options = {
+    headers: {
+      Authorization: localStorage.getItem('token'),
+    },
+  }
+  let user_id = 1
+  const response = await fetch(
+    `http://localhost:3000/users/profile/${user_id}/complaints`,
+    options
+  )
+
+  if (response.status === 200) {
+    const data = await response.json()
+    renderData(data)
+  }
+  // } else {
+  //   window.location.assign('./index.html')
+  // }
+}
+
+function renderData(data) {
+  data.forEach((post) => {
+    const { post_date, title, content } = post
+
+    const container = document.getElementById('userComplaints')
+    const postTitle = document.createElement('p')
+    const date = document.createElement('p')
+    const postContent = document.createElement('p')
+
+    date.textContent = `Date: ${post_date}`
+    postTitle.textContent = `Title: ${title}`
+    postContent.textContent = `Title: ${content}`
+
+    container.appendChild(date)
+    container.appendChild(postTitle)
+    container.appendChild(postContent)
+  })
+}
+
+loadComplaints()
