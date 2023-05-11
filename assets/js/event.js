@@ -81,6 +81,7 @@ const addEvent1 = document.getElementById('event-btn1')
 addEvent1.addEventListener('click', submitForm1)
 
     async function submitForm1() {
+    document.getElementById('event-btn1').disabled = true
     // event.preventDefault()
     const add = {
       user_id: parseInt(localStorage.getItem('userToken')),
@@ -108,6 +109,7 @@ addEvent.addEventListener('click', submitForm2)
 
     async function submitForm2() {
     // event.preventDefault()
+    document.getElementById('event-btn2').disabled = true
     const add = {
       user_id: parseInt(localStorage.getItem('userToken')),
       event_id: 2,
