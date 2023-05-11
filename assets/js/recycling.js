@@ -72,7 +72,7 @@ function createPostElement(data) {
     if (response.status === 200) {
       const posts = await response.json()
   
-      const container = document.getElementById('posts')
+      const container = document.getElementById('recy_posts')
   
       posts.forEach((p) => {
         const elem = createPostElement(p)
