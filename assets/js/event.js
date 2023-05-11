@@ -127,4 +127,8 @@ addEvent.addEventListener('click', submitForm2)
     if (result.status === 201) {
     console.log('done')
     }
-}
+  }
+
+
+module.exports = {fetchEvents}
+
