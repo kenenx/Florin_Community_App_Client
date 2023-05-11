@@ -10,13 +10,19 @@
     background: linear-gradient(#034732, #9198e500);
     
 }
+
+.logo{
+    max-width: 120px;
+    margin: auto;
+}
+
 #complaints-form{
     margin: auto;
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px;
-    
 }
+
 #comp_img{
     margin: auto;
     display: flex;
@@ -26,7 +32,7 @@
 }
 body{
     /* background: linear-gradient(#3a0505, #a10707);  */
-    background-color: rgb(187, 241, 188); 
+    background-color: #F3F3F3; 
 
 } 
 
@@ -34,7 +40,55 @@ body{
     display: flex;
     margin-top: 30px;
 }
+.infoUser{
+    display: grid;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #A50104;
+    height: 100px;
+}
+.gridprofile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.colprofile{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* background-color: #2978A0; */
+    min-height: 100px;
+    min-width: 500px;
+    max-width: 1000px;
+    
+}
+#bininfo{
+    height: 100px;
+    width:auto;
+    background-color: #2978A0;
+    margin-bottom: 20px;
+}
+#userComplaints{
+    height: 400px;
+    width: auto;
+    background-color: #9f0d75;
+}
 
+.eventTable{
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 520px;
+    min-width:500px;
+    max-width: 1000px;
+    background-color: #0f663f;
+    /* margin: auto; */
+     margin-left: 30px;
+    /*margin-right: 30px; */
+}
 #eventbtn{
     width: 220px;
     height: 220px;
@@ -63,10 +117,7 @@ body{
     filter: drop-shadow(0 4mm 1mm rgb(47, 31, 4));
 }
 
-.logo{
-    max-width: 120px;
-    margin: auto;
-}
+
 
 .noticeboard {
     display: grid;
