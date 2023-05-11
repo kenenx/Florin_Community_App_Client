@@ -1,9 +1,44 @@
 @import url('./complaint.css');
-
+@import url('./welcomepage.css');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=League+Spartan:wght@500;900&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Kalam', cursive;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.navbar {
+  background: linear-gradient(#8e0000, #9198e500);
+}
+
+/* body{
+    background: linear-gradient(#3a0505, #a10707); 
+    background-color: rgb(76, 4, 4);
+} */
+
+#eventbtn {
+  width: 200px;
+  height: 200px;
+  border: 0;
+  background-color: purple;
+  font-size: 40px;
+}
+
+.noticeboard {
+  display: grid;
+  /* grid-template-columns: auto auto auto; */
+  padding: 10px;
+  width: auto;
+  min-height: 300px;
+  background-color: rgb(118, 73, 13);
+  box-shadow: inset 0 1mm 10px #442e05;
+  border: 15px solid rgb(71, 40, 4);
+  filter: drop-shadow(0 4mm 1mm rgb(47, 31, 4));
+  justify-content: center;
+  margin: auto;
+  margin-top: 50px;
 }
 
 .navbar{

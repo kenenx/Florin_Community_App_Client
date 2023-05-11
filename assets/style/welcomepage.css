@@ -1,0 +1,92 @@
+.welcome-page-container video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-container {
+  width: 800px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-2%, -10%);
+  margin: auto;
+  color: #ffffff;
+}
+
+.heading {
+  font-size: 60px;
+
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
+  font-weight: 900;
+  margin-left: 8px;
+}
+
+.work-together {
+  font-size: 25px;
+  margin-left: 15px;
+  text-shadow: 10px 12px 15px rgba(0, 0, 0, 0.3),
+    10px 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+.login-tag {
+  color: black;
+}
+
+.register-buttons,
+.login-buttons {
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 20px;
+  color: black;
+  border: none;
+  transition: background-color 0.3s ease-out;
+}
+.register-buttons:hover,
+.login-buttons:hover {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  box-shadow: 1px 3px 4px rgba(255, 255, 255, 1);
+  transform: translateY(-4px);
+}
+
+.register-buttons:before,
+.login-buttons::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  background-color: #ffffff;
+  transition: all 0.3s ease-out;
+}
+
+.register-buttons:hover::before,
+.login-buttons:hover::before {
+  width: 100%;
+  background-color: transparent;
+}
+
+.button-container {
+  display: flex;
+  gap: 40px;
+  margin-left: 15px;
+}
