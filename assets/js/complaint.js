@@ -11,12 +11,12 @@ async function fetchUserToken() {
       userToken = data
   })
   .then(() => {
+      localStorage.setItem('userToken', userToken.user_id)
       console.log(userToken.user_id);
   })
   .catch(err => console.log(err))
 }
-
-console.log(fetchUserToken())
+fetchUserToken()
 
 const form = document.getElementById('complaints-form')
 
@@ -33,7 +33,7 @@ async function submitForm(event) {
     title: event.target.title.value,
     post_date: event.target.date.value,
     content: event.target.content.value,
-    user_id: 1,
+    user_id: parseInt(localStorage.getItem('userToken')),
   }
 
   const options = {
