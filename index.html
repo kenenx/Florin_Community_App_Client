@@ -5,27 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
     <script src="./assets/js/index.js" defer></script>
-    <title>Welcome Page</title>
+    <title>welcome</title>
   </head>
   <body>
-    <video loop muted autoplay preload="auto">
-      <source
-        src="https://media.istockphoto.com/id/1077563614/video/person-picking-up-litter-with-a-litter-picker.mp4?p=1&s=mp4-640x640-is&k=20&c=rBZZOrO7UyUCkOtSNGX0D3QSO8PTJsiGWLkIXaE-52I="
-      />
-      Your browser does not support the video tag.
-    </video>
-
-    <header>
-      <h1>Commuity app</h1>
-      <em>Lets work together.</em>
-    </header>
-    <hr />
-    <main>
-      <ul>
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./register.html">Sign up</a></li>
-      </ul>
-    </main>
+    <div class="welcome-page-container">
+      <video loop muted autoplay preload="auto" class="video">
+        <source
+          src="https://media.istockphoto.com/id/1077563614/video/person-picking-up-litter-with-a-litter-picker.mp4?p=1&s=mp4-640x640-is&k=20&c=rBZZOrO7UyUCkOtSNGX0D3QSO8PTJsiGWLkIXaE-52I="
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="text-container">
+        <h1 class="heading">Work With Us!</h1>
+        <p class="work-together">Together We can Change The World</p>
+        <div class="button-container">
+          <a href="./login.html" class="login-tag">
+            <button class="login-buttons">Login</button></a
+          >
+          <a class="register-tag" href="./register.html">
+            <button class="register-buttons">Sign Up</button>
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

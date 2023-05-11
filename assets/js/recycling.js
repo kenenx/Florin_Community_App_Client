@@ -45,7 +45,7 @@ document
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        recy_title: form.get('title'),
+        title: form.get('title'),
         recy_type: form.get('recy_type'),
         post_date: form.get('post_date'),
         info: form.get('info'),
