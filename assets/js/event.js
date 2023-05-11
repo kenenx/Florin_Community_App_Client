@@ -79,8 +79,13 @@ async function fetchEvents() {
 fetchEvents()
 
 
-const addEvent1 = document.getElementById('event-btn1')
-addEvent1.addEventListener('click', renderUserToken1)
+window.onload=function(){
+    const addEvent1 = document.getElementById('event-btn1')
+    addEvent1.addEventListener('click', renderUserToken1)
+    const addEvent2 = document.getElementById('event-btn2')
+    addEvent2.addEventListener('click', renderUserToken2)
+}
+
 
 async function renderUserToken1() {
 
@@ -109,9 +114,6 @@ async function renderUserToken1() {
     }
   }
 }
-
-const addEvent2 = document.getElementById('event-btn2')
-addEvent2.addEventListener('click', renderUserToken2)
 
 async function renderUserToken2() {
 
