@@ -1,22 +1,42 @@
+// async function fetchUserToken() {
+//     const options = {
+//         method: 'GET',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         }
+//     }
+//     fetch(`https://florin-api.onrender.com/users/profile`, options)
+//     .then(resp => resp.json())
+//     .then(data => {
+//         userToken = data.user_id
+//     })
+//     .then(() => {
+//         console.log(userToken)
+//         return userToken;
+//     })
+//     .catch(err => console.log(err))
+// }
+
 async function fetchUserToken() {
-    const options = {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
+    try {
+        const options = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
         }
+        const response = await fetch(`https://florin-api.onrender.com/users/profile`, options)
+        const userToken = await response.json();
+        return userToken.user_id
+    } catch (error) {
+        console.error(error);
     }
-    fetch(`https://florin-api.onrender.com/users/profile`, options)
-    .then(resp => resp.json())
-    .then(data => {
-        userToken = data
-    })
-    .then(() => {
-        console.log(userToken.user_id);
-    })
-    .catch(err => console.log(err))
 }
 
-
+// async function renderUserToken() {
+//     const userToken = await fetchUserToken();
+//     return userToken;
+// }
 
 async function fetchEvents() {
     const options = {
@@ -55,3 +75,67 @@ async function fetchEvents() {
     .catch(err => console.log(err))
 }
 fetchEvents()
+
+async function renderUserToken1() {
+
+    const userToken = await fetchUserToken();
+
+    const addEvent = document.getElementById('event-btn1')
+    addEvent.addEventListener('click', submitForm)
+
+    async function submitForm() {
+    // event.preventDefault()
+    const add = {
+      user_id: userToken,
+      event_id: 1,
+    }
+  
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(add),
+    }
+  
+    console.log(add)
+    const result = await fetch('https://florin-api.onrender.com/userevents', options)
+    console.log(result)
+    if (result.status === 201) {
+    console.log('done')
+    }
+  }
+}
+renderUserToken1()
+
+async function renderUserToken2() {
+
+    const userToken = await fetchUserToken();
+
+    const addEvent = document.getElementById('event-btn2')
+    addEvent.addEventListener('click', submitForm)
+
+    async function submitForm() {
+    // event.preventDefault()
+    const add = {
+      user_id: userToken,
+      event_id: 2,
+    }
+  
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(add),
+    }
+  
+    console.log(add)
+    const result = await fetch('https://florin-api.onrender.com/userevents', options)
+    console.log(result)
+    if (result.status === 201) {
+    console.log('done')
+    }
+  }
+}
+renderUserToken2()
