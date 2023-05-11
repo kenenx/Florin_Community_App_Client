@@ -80,7 +80,6 @@ async function fetchEvents() {
       type1Element.innerHTML = data[0]['date']
       content1Element.innerHTML = data[0]['content']
       attendance1Element.innerHTML = `Attendance: ${data[0]['attendance']}`
-
       title1Element.classList.add('heading-event')
       date1Element.classList.add('date-event')
       type1Element.classList.add('type-event')
@@ -97,12 +96,27 @@ async function fetchEvents() {
       type2Element.innerHTML = data[1]['date']
       content2Element.innerHTML = data[1]['content']
       attendance2Element.innerHTML = `Attendance: ${data[1]['attendance']}`
-
       title2Element.classList.add('heading-event')
       date2Element.classList.add('date-event')
       type2Element.classList.add('type-event')
       content2Element.classList.add('content-event')
       attendance2Element.classList.add('attendance-event')
+
+      const title3Element = document.getElementById('event3')
+      const date3Element = document.getElementById('date3')
+      const type3Element = document.getElementById('type3')
+      const content3Element = document.getElementById('content3')
+      const attendance3Element = document.getElementById('attendance3')
+      title3Element.innerHTML = data[2]['title']
+      date3Element.innerHTML = data[2]['type']
+      type3Element.innerHTML = data[2]['date']
+      content3Element.innerHTML = data[2]['content']
+      attendance3Element.innerHTML = `Attendance: ${data[2]['attendance']}`
+      title3Element.classList.add('heading-event')
+      date3Element.classList.add('date-event')
+      type3Element.classList.add('type-event')
+      content3Element.classList.add('content-event')
+      attendance3Element.classList.add('attendance-event')
     })
     .catch((err) => console.log(err))
 }
@@ -138,8 +152,8 @@ async function submitForm1() {
   }
 }
 
-const addEvent = document.getElementById('event-btn2')
-addEvent.addEventListener('click', submitForm2)
+const addEvent2 = document.getElementById('event-btn2')
+addEvent2.addEventListener('click', submitForm2)
 
 async function submitForm2() {
   // event.preventDefault()
@@ -167,4 +181,35 @@ async function submitForm2() {
     console.log('done')
   }
 }
-module.exports = { fetchEvents }
+
+const addEvent3 = document.getElementById('event-btn3')
+addEvent3.addEventListener('click', submitForm3)
+
+async function submitForm3() {
+  // event.preventDefault()
+  document.getElementById('event-btn3').disabled = true
+  const add = {
+    user_id: parseInt(localStorage.getItem('userToken')),
+    event_id: 3,
+  }
+
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(add),
+  }
+
+  console.log(add)
+  const result = await fetch(
+    'https://florin-api.onrender.com/userevents',
+    options
+  )
+  console.log(result)
+  if (result.status === 201) {
+    console.log('done')
+  }
+}
+
+// module.exports = { fetchEvents }
