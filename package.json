@@ -1,7 +1,10 @@
 {
   "devDependencies": {
+    "concurrently": "^8.0.1",
+    "jest-environment-jsdom": "^29.5.0",
     "jest-fetch-mock": "^3.0.3",
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "watchify": "^4.0.0"
   },
   "scripts": {
     "dev": "live-server",

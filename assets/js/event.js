@@ -70,3 +70,9 @@ form.addEventListener('submit', function (event) {
     login()
   }
 })
+
+
+///////////////////////////////////////////////
+//event testing
+module.exports = {fetchEvents}
+

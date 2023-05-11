@@ -18,6 +18,7 @@ async function fetchUserToken() {
 }
 
 console.log(fetchUserToken())
+
 /////////////////////////////////////////////////////////////////
 //user displayed info
 async function userprofileinfo(){
@@ -28,7 +29,6 @@ async function userprofileinfo(){
     }
 }
   const response= await fetch(`https://florin-api.onrender.com/users/profile/${user_id}`, options);
->>>>>>> 52d881d3eaf0120da0d8053edd399ad368f8d9e2
 
   if (response.status == 200) {
     const data = await response.json();
@@ -119,3 +119,8 @@ function renderData(data) {
 }
 
 loadComplaints()
+
+///////////////////////////////////////////////////////////////
+// for testing
+////////////////////////////////////////////////////////
+module.exports = {userprofileinfo,loadbinCollData,loadComplaints }
