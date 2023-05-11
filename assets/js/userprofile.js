@@ -90,7 +90,7 @@ async function loadComplaints() {
   }
   let user_id = parseInt(localStorage.getItem('userToken'))
   const response = await fetch(
-    `http://localhost:3000/users/profile/${user_id}/complaints`,
+    `https://florin-api.onrender.com/complaints/${user_id}`,
     options
   )
 
