@@ -12,14 +12,17 @@
   height: 100px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
-  gap: 20px;
+  align-items: center;
+  gap: 25px;
   position: absolute;
-  top: 50%;
-  left: 40%;
+  top: 45%;
+  left: 35%;
   transform: translate(-2%, -10%);
   margin: auto;
   color: #ffffff;
+  font-weight: 900;
 }
 
 .heading {

@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/images/favicon.png">
-    <link rel="stylesheet" href="./assets/style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
     <script src="./assets/js/login.js" defer></script>
     <title>login</title>
-</head>
-<body>
-    <header>
-        <h1>Commuinty app</h1>
-        <em>We need you.</em>
-    </header>
-    <hr />
-    <main>
-        <form id="login-form">
-            <fieldset>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
-            </fieldset>
-            <fieldset>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
-            </fieldset>
-            <input type="submit" value="Log in">
-        </form>
-        <p>No account? <a href="./register.html">Sign up here</a>.</p>
-    </main>
-</body>
+  </head>
+  <body>
+    <div class="login-container">
+      <img src="./assets/images/trash.png" alt="trash" class="trash" />
+
+      <form id="login-form">
+        <h1 class="login-header">Login</h1>
+        <!-- <label for="username">Username:</label> -->
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Email"
+          class="input-login"
+        />
+
+        <!-- <label for="password" class="username">Password:</label> -->
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="input-login"
+          placeholder="Password"
+        />
+
+        <input type="submit" value="Log in" class="submit" />
+        <div class="sign-up">
+          <p>
+            No account?
+            <a class="sign-up-here" href="./register.html">Sign Up Here</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
