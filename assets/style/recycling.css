@@ -1,0 +1,56 @@
+h1{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+em{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#recyclingdates{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 20, 20);
+    background: linear-gradient(#98a24d79,#c6d36573);
+    margin: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#recycling-form{
+    margin-top: 50px;
+}
+
+#rows{
+    display: grid;
+    flex-direction:column;
+}
+#one{
+    /* display: grid; */
+    /* flex-direction: row; */
+    height: 100px;
+    width: 300px;
+    background-color: azure;
+}
+#two{
+    /* display: grid; */
+    /* flex-direction: row; */
+    height: 100px;
+    width: 300px;
+    background-color: aquamarine;
+}
+#three{
+    /* display: grid; */
+    /* flex-direction: row; */
+    height: 100px;
+    width: 300px;
+    background-color: blue;
+}
