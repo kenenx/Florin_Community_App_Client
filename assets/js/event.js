@@ -76,13 +76,13 @@ async function fetchEvents() {
 }
 fetchEvents()
 
+const addEvent1 = document.getElementById('event-btn1')
+addEvent1.addEventListener('click', renderUserToken1)
+
 async function renderUserToken1() {
 
     const userToken = await fetchUserToken();
-
-    const addEvent = document.getElementById('event-btn1')
-    await addEvent.addEventListener('click', submitForm)
-
+    submitForm()
     async function submitForm() {
     // event.preventDefault()
     const add = {
@@ -106,14 +106,15 @@ async function renderUserToken1() {
     }
   }
 }
-renderUserToken1()
+
+const addEvent2 = document.getElementById('event-btn2')
+addEvent2.addEventListener('click', renderUserToken2)
 
 async function renderUserToken2() {
 
     const userToken = await fetchUserToken();
 
-    const addEvent = document.getElementById('event-btn2')
-    await addEvent.addEventListener('click', submitForm)
+    submitForm()
 
     async function submitForm() {
     // event.preventDefault()
@@ -138,4 +139,3 @@ async function renderUserToken2() {
     }
   }
 }
-renderUserToken2()
