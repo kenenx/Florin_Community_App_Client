@@ -90,7 +90,7 @@ async function loadComplaints() {
   }
   let user_id = parseInt(localStorage.getItem('userToken'))
   const response = await fetch(
-    `https://florin-api.onrender.com/complaints/${user_id}`,
+    `https://florin-api.herokuapp.com/complaints/${user_id}`,
     options
   )
 
