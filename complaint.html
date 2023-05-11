@@ -18,7 +18,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid text-center">
-        <a class="navbar-brand" href="./index.html">
+        <a class="navbar-brand" href="./mainpage.html">
           <img class="logo" src="./assets/images/florinLogo.png" />
         </a>
         <button
@@ -35,15 +35,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./events.html"
-                >Events</a
-              >
+              <a class="nav-link" href="./event.html">Events</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./recycling.html">Recycling</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./complaints.html">Complaints</a>
+              <a class="nav-link" href="./complaint.html">Complaints</a>
             </li>
             <li class="nav-item-userprofile">
               <a class="nav-link" href="./userprofile.html">Profile</a>
@@ -54,42 +52,40 @@
     </nav>
 
     <form id="complaints-form" action="post">
-      <div class="complaint-container">
-        <div class="date-picker">
-          <label for="date" class="form-label content">Date:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="date"
-            aria-describedby="date"
-          />
-        </div>
-        <label for="title" class="form-label form-title">Title:</label>
+      <div class="date-picker">
+        <label for="date" class="form-label content">Date:</label>
         <input
           type="text"
           class="form-control"
-          id="title"
-          aria-describedby="title"
+          id="date"
+          aria-describedby="date"
         />
+      </div>
+      <label for="title" class="form-label form-title">Title:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        aria-describedby="title"
+      />
 
-        <div class="mb-3">
-          <label for="content" class="form-label content">Content:</label>
-          <textarea
-            cols="80"
-            rows="10"
-            id="content"
-            class="form-control"
-            type="text"
-            name="textbox"
-          >
-          </textarea>
-        </div>
-        <div class="btn-post-container">
-          <button type="submit" class="button">Submit</button>
-          <button type="submit" class="button">
-            <a href="./post.html" class="view-complaints">View Complaints</a>
-          </button>
-        </div>
+      <div class="mb-3">
+        <label for="content" class="form-label content">Content:</label>
+        <textarea
+          cols="80"
+          rows="10"
+          id="content"
+          class="form-control"
+          type="text"
+          name="textbox"
+        >
+        </textarea>
+      </div>
+      <div class="btn-post-container">
+        <button type="submit" class="button">Submit</button>
+        <button type="submit" class="button">
+          <a href="./post.html" class="view-complaints">View Complaints</a>
+        </button>
       </div>
     </form>
   </body>

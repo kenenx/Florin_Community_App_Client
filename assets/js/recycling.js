@@ -98,3 +98,7 @@ function createPostElement(data) {
   }
   
   loadRecPosts()
+
+  //////////////////////////////////////
+  //for testing
+  module.exports = {loadRecPosts, deleteRecycling}

@@ -4,15 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
     <link rel="shortcut icon" href="./assets/images/favicon.png" />
     <link rel="stylesheet" href="./assets/style/style.css" />
+    <link rel="stylesheet" href="./assets/style/recycling.css" />
     <script defer src="./assets/js/recycling.js"></script>
     <script defer src="./assets/js/logout.js"></script>
     <title>recycling</title>
   </head>
   <body>
-    <nav>
-      <a id="logoutbtn" href="./index.html">Log out</a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid text-center">
+        <a class="navbar-brand" href="./mainpage.html">
+          <img class="logo" src="./assets/images/florinLogo.png" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./event.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./recycling.html">Recycling</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./complaint.html">Complaints</a>
+            </li>
+            <li class="nav-item-userprofile">
+              <a class="nav-link" href="./userprofile.html">Profile</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <header>
       <h1>Recycling</h1>
@@ -20,8 +63,19 @@
     </header>
     <hr />
     <main>
-      <hr />
+      <section id="recyclingdates">
+        <p>
+          Remember to take out your recycling and general waste the night before
+          your bin colection day to avoid disappointment
+        </p>
+      </section>
+      <section id="rows">
+        <div id="one"></div>
+        <div id="two"></div>
+        <div id="three"></div>
+      </section>
       <form id="recycling-form">
+        <h3>List your own</h3>
         <fieldset>
           <label for="title">Title:</label>
           <input type="title" id="title" name="title" required />
@@ -49,7 +103,7 @@
           <label for="img">img link:</label>
           <textarea id="img" name="img"></textarea>
         </fieldset>
-        <input type="submit" value="Post" />
+        <input id="sumbit" type="submit" value="Post" />
       </form>
       <!-- post posts -->
       <div class="container" id="posts"></div>
