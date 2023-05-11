@@ -3,6 +3,24 @@
     "live-server": "^1.2.2"
   },
   "scripts": {
-    "dev": "live-server"
+    "dev": "live-server",
+    "test": "jest --watchAll",
+    "coverage": "jest --coverage"
+  },
+  
+  "name": "florin_community_app_client",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0",
+    "jsdom": "^22.0.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "./__tests__/helpers.js"
+    ]
   }
 }
