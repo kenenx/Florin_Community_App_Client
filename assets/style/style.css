@@ -2,6 +2,7 @@
 @import url('./welcomepage.css');
 @import url('./mainpage.css');
 @import url('./login.css');
+@import url('./post.css');
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=League+Spartan:wght@500;900&display=swap');
 * {
   margin: 0;

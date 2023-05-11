@@ -1,3 +1,104 @@
-/* .navbar {
-  background: linear-gradient(green, blue);
-} */
+#complaints-form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+}
+.title-date-container {
+  display: flex;
+}
+
+.complaint-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 8px;
+}
+
+.title {
+  font-size: 60px;
+  margin-bottom: 50px;
+  padding-left: 50px;
+}
+
+.form-label {
+  font-size: 30px;
+}
+
+#title {
+  height: 50px;
+  max-width: 800px;
+  border-color: black;
+  outline-style: none;
+  box-shadow: none;
+  text-align: left;
+  display: table;
+  vertical-align: top;
+}
+
+#content {
+  height: 300px;
+  max-width: 800px;
+  border-color: black;
+  outline-style: none;
+  box-shadow: none;
+  text-align: left;
+  vertical-align: top;
+}
+
+.button {
+  width: 30vh;
+  height: 5vh;
+  background: #98a24d;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  margin-left: 80px;
+  color: #ffff;
+}
+
+.button:hover {
+  filter: drop-shadow(0.6mm 0.8mm rgb(200, 200, 200));
+  transform: translate(0px, -3px) scale(1.05);
+}
+
+#date {
+  height: 40px;
+  max-width: 150px;
+  border-color: black;
+  outline-style: none;
+  box-shadow: none;
+}
+
+.date-picker {
+  display: flex;
+  width: 50%;
+  gap: 10px;
+}
+
+.form-post {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  gap: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+}
+
+.view-complaints {
+  text-decoration: none;
+  color: #ffffff;
+}
