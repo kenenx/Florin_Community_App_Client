@@ -6,7 +6,8 @@ async function fetchUserToken() {
           'Content-Type': 'application/json'
       }
   }
-  fetch(`https://florin-api.onrender.com/users/profile`, options)
+  fetch(`https://florin-api.onrender.com/users/profile`, 
+  )
   .then(resp => resp.json())
   .then(data => {
       userToken = data
@@ -120,7 +121,4 @@ function renderData(data) {
 
 loadComplaints()
 
-///////////////////////////////////////////////////////////////
-// for testing
-////////////////////////////////////////////////////////
-module.exports = {userprofileinfo,loadbinCollData,loadComplaints }
+

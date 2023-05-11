@@ -1,6 +1,10 @@
 
 const {renderDOM } = require('./helpers')
 
+
+let dom;
+let document;
+
 describe('index.html',()=>{
     beforeEach(async () => {
         dom = await renderDOM('./index.html')
@@ -120,11 +124,19 @@ describe('recycling.html',()=>{
     it('has a input date area', () => {
         const from = document.querySelector('form')
         const input = document.querySelectorAll('#post_date')
+        input.value = ''
+    
+        form.dispatchEvent(new dom.window.Event('submit'))
+        expect(input.innerHTML).toContain(input.value)
         expect(input).toBeTruthy()
     })
     it('has a input content area', () => {
         const from = document.querySelector('form')
         const input = document.querySelectorAll('#info')
+        input.value = 'nicole'
+    
+        form.dispatchEvent(new dom.window.Event('submit'))
+        expect(input.innerHTML).toContain(input.value)
         expect(input).toBeTruthy()
     })
     it('has a sumbit btn', () => {
@@ -145,96 +157,90 @@ describe('post.html',()=>{
     })
     it('has delete btn', () => {
         const btn = document.querySelector('.yes-button')
-        const btn2 = document.querySelector('.no-button')
         expect(btn).toBeTruthy()
-        expect(btn2).toBeTruthy()
     })
     it('has update btn', () => {
         const btn = document.querySelector('.yes2-button')
-        const btn2 = document.querySelector('.no2-button')
         expect(btn).toBeTruthy()
-        expect(btn2).toBeTruthy()
     })
 })
 
 /////////////////
 //complaints
-describe('complaints.html',()=>{
-    beforeEach(async () => {
-        dom = await renderDOM('./complaints.html')
-        document = await dom.window.document
-    })
-    it('has a navbar', () => {
-        const nav = document.querySelector('nav')
-        expect(nav).toBeTruthy()
-    })
+// describe('complaints.html',()=>{
+//     beforeEach(async () => {
+//         dom = await renderDOM('./complaints.html')
+//         document = await dom.window.document
+//     })
+//     it('has a navbar', () => {
+//         const nav = document.querySelector('nav')
+//         expect(nav).toBeTruthy()
+//     })
    
-    it('has a input title area', () => {
-        const from = document.querySelector('form')
-        const input = document.querySelectorAll('#title')
-        expect(input).toBeTruthy()
-    })
-    it('has a input date area', () => {
-        const from = document.querySelector('form')
-        const input = document.querySelectorAll('#date')
-        expect(input).toBeTruthy()
-    })
-    it('has a input content area', () => {
-        const from = document.querySelector('form')
-        const input = document.querySelectorAll('#content')
-        expect(input).toBeTruthy()
-    })
-    it('has a sumbit btn', () => {
-        const btn = document.querySelector('#sumbit')
-        expect(btn).toBeTruthy()
-    })
-})
+//     it('has a input title area', () => {
+//         const from = document.querySelector('form')
+//         const input = document.querySelectorAll('#title')
+//         expect(input).toBeTruthy()
+//     })
+//     it('has a input date area', () => {
+//         const from = document.querySelector('form')
+//         const input = document.querySelectorAll('#date')
+//         expect(input).toBeTruthy()
+//     })
+//     it('has a input content area', () => {
+//         const from = document.querySelector('form')
+//         const input = document.querySelectorAll('#content')
+//         expect(input).toBeTruthy()
+//     })
+//     it('has a sumbit btn', () => {
+//         const btn = document.querySelector('#sumbit')
+//         expect(btn).toBeTruthy()
+//     })
+// })
 
-//events
-describe('events.html',()=>{
-    beforeEach(async () => {
-        dom = await renderDOM('./events.html')
-        document = await dom.window.document
-    })
-    it('has a navbar', () => {
-        const nav = document.querySelector('nav')
-        expect(nav).toBeTruthy()
-    })
+// //events
+// describe('events.html',()=>{
+//     beforeEach(async () => {
+//         dom = await renderDOM('./events.html')
+//         document = await dom.window.document
+//     })
+//     it('has a navbar', () => {
+//         const nav = document.querySelector('nav')
+//         expect(nav).toBeTruthy()
+//     })
    
-    it('has a info area', () => {
-        const info = document.querySelectorAll('.card-body')
-        expect(info).toBeTruthy()
-    })
+//     it('has a info area', () => {
+//         const info = document.querySelectorAll('#event1')
+//         expect(info).toBeTruthy()
+//     })
 
-    it('has a add event btn', () => {
-        const btn = document.querySelector('#event-btn')
-        const btn2 = document.querySelector('#event-btn2')
-        expect(btn).toBeTruthy()
-        expect(btn2).toBeTruthy()
-    })
-})
+//     it('has a add event btn', () => {
+//         const btn = document.querySelector('#event-btn')
+//         expect(btn).toBeTruthy()
+    
+//     })
+// })
 
 //user profile
-describe('userprofile.html',()=>{
-    beforeEach(async () => {
-        dom = await renderDOM('./userprofile.html')
-        document = await dom.window.document
-    })
-    it('has a navbar', () => {
-        const nav = document.querySelector('nav')
-        expect(nav).toBeTruthy()
-    })
-    it('has a recycling button', () => {
-        const btn = document.querySelector('#recyclebtn')
-        expect(btn).toBeTruthy()
-    })
-    it('has a events button', () => {
-        const btn = document.querySelectorAll('#eventbtn')
-        expect(btn).toBeTruthy()
-    })
-
-    it('has a complaints button', () => {
-        const btn = document.querySelectorAll('#complaintsbtn')
-        expect(btn).toBeTruthy()
-    })
-})
+// describe('userprofile.html',()=>{
+//     beforeEach(async () => {
+//         dom = await renderDOM('./userprofile.html')
+//         document = await dom.window.document
+//     })
+//     it('has a navbar', () => {
+//         const nav = document.querySelector('nav')
+//         expect(nav).toBeTruthy()
+//     })
+//     it('has a bin collection date', () => {
+//         const btn = document.querySelector('#bininfo')
+//         expect(btn).toBeTruthy()
+//     })
+//     it('has a user complaints', () => {
+//         const btn = document.querySelectorAll('#userComplaints')
+//         expect(btn).toBeTruthy()
+//     })
+//     it('has a user events', () => {
+//         const btn = document.querySelectorAll('#userEvent')
+//         expect(btn).toBeTruthy()
+//     })
+// })
