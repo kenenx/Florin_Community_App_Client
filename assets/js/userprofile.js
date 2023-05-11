@@ -6,22 +6,27 @@ async function fetchUserToken() {
           'Content-Type': 'application/json'
       }
   }
-  fetch(`https://florin-api.onrender.com/users/profile`, options)
+  fetch(`https://florin-api.onrender.com/users/profile`, 
+  )
   .then(resp => resp.json())
   .then(data => {
       userToken = data
   })
   .then(() => {
+      localStorage.setItem('userToken', userToken.user_id)
       console.log(userToken.user_id);
   })
   .catch(err => console.log(err))
 }
+fetchUserToken()
+
 
 console.log(fetchUserToken())
+
 /////////////////////////////////////////////////////////////////
 //user displayed info
 async function userprofileinfo(){
-  user_id = 1
+  user_id = parseInt(localStorage.getItem('userToken'))
   const options = {
     headers: {
         'Authorization': localStorage.getItem("token")
@@ -83,7 +88,7 @@ async function loadComplaints() {
       Authorization: localStorage.getItem('token'),
     },
   }
-  let user_id = 1
+  let user_id = parseInt(localStorage.getItem('userToken'))
   const response = await fetch(
     `http://localhost:3000/users/profile/${user_id}/complaints`,
     options
@@ -118,3 +123,5 @@ function renderData(data) {
 }
 
 loadComplaints()
+
+

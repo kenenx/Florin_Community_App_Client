@@ -164,3 +164,8 @@ async function updateEntry(id, data) {
 }
 
 viewComplaint()
+
+//////////////////////////////////////////////////////////
+//for testing
+
+module.exports = {viewComplaint,deletePost,updateEntry}

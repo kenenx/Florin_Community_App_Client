@@ -1,8 +1,29 @@
 {
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "concurrently": "^8.0.1",
+    "jest-environment-jsdom": "^29.5.0",
+    "jest-fetch-mock": "^3.0.3",
+    "jsdom": "^22.0.0",
+    "live-server": "^1.2.2",
+    "watchify": "^4.0.0"
   },
   "scripts": {
-    "dev": "live-server"
+    "dev": "live-server",
+    "test": "jest --watchAll",
+    "coverage": "jest --coverage"
+  },
+  "name": "florin_community_app_client",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "./__tests__/helpers.js"
+    ]
   }
 }
