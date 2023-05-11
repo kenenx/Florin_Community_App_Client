@@ -18,6 +18,26 @@
 //     localStorage.setItem('userToken', userToken)
 //     return userToken;
 // }
+// async function fetchUserToken() {
+//     try {
+//         const options = {
+//             method: 'GET',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             }
+//         }
+//         const response = await fetch(`https://florin-api.onrender.com/users/profile`, options)
+//         const userToken = await response.json();
+//         return userToken.user_id
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
+// async function renderUserToken() {
+//     const userToken = await fetchUserToken();
+//     localStorage.setItem('userToken', userToken)
+//     return userToken;
+// }
 async function fetchUserToken() {
   const options = {
     method: 'GET',
@@ -147,5 +167,4 @@ async function submitForm2() {
     console.log('done')
   }
 }
-
 module.exports = { fetchEvents }
