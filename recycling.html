@@ -23,45 +23,139 @@
     <title>recycling</title>
   </head>
   <body>
-    <nav>
-      <a id="logoutbtn" href="./index.html">Log out</a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid text-center">
+        <a class="navbar-brand" href="./mainpage.html">
+          <img class="logo" src="./assets/images/florinLogo.png" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./event.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./recycling.html">Recycling</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./complaint.html">Complaints</a>
+            </li>
+            <li class="nav-item-userprofile">
+              <a class="nav-link" href="./userprofile.html">Profile</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <header>
       <h1>Recycling</h1>
       <em>Florinbook marketplace</em>
     </header>
     <hr />
-    <main>
-      <hr />
-      <form id="recycling-form">
-        <fieldset>
-          <label for="title">Title:</label>
-          <input type="title" id="title" name="title" required />
-        </fieldset>
-        <fieldset>
-          <label for="recy_type">Type:</label>
-          <input list="recy_types" id="recy_type" name="recy_type" required />
-          <datalist id="recy_types">
-            <option value="plastic"></option>
-            <option value="wood"></option>
-            <option value="metal"></option>
-            <option value="glass"></option>
-            <option value="other"></option>
-          </datalist>
-        </fieldset>
-        <fieldset>
-          <label for="post_date">Date:</label>
-          <input type="post_date" id="post_date" name="post_date" required />
-        </fieldset>
-        <fieldset>
-          <label for="info">Content:</label>
-          <textarea id="info" name="info" required></textarea>
-        </fieldset>
-        <fieldset>
-          <label for="img">img link:</label>
-          <textarea id="img" name="img"></textarea>
-        </fieldset>
-        <input type="submit" value="Post" />
+    <main>  
+      <section id="recyclingdates">
+        <p id ='p'>Remember to take out your recycling and general waste the night before your bin colection day to avoid disappointment</p>
+      </section>  
+      <section class = 'row align-items-center'>
+        <div id ='one'>
+          <div id = 'recy_show'>
+            <h4>Old table for a good home</h4>
+            <h5>20-04-2023</h5>
+            <em>wood</em>
+            <p>Missing a leg but is still good, could easily go in the corner</p>
+          </div>
+        </div>
+        <div id ='two'> 
+          <div id = 'recy_show'>
+            <h4>Hamper chair, not used</h4>
+            <h5>25-04-2023</h5>
+            <em>plastic</em>
+            <p>Very good condition, I never used it so would like to not just throw it away</p>
+          </div>
+        </div>
+        <div id ='three'> 
+          <div id = 'recy_show'>
+            <h4>Sofa worn but still good</h4>
+            <h5>29-04-2023</h5>
+            <em>other</em>
+            <p>Still has a good few years left in it, great for any home! Just not mine</p>
+          </div>
+        </div>
+      </section>
+        </div>
+      </div>
+      <hr/>
+       
+      <!-- recycling posts-->
+      <form id="recycling-form" action="post"> 
+        <h3 style="display: flex; justify-content: center;">List your own</h3>
+        <div class="date-picker">
+          <label for="post_date" class="post_date form-label content" >Date:</label>
+          <input
+            type="post_date"
+            class="form-control"
+            id="post_date"
+            aria-describedby="date"
+            name="post_date" required
+          />
+        </div>
+        <label for="title" class="title form-label form-title" style="display: flex; justify-content: left; padding: 0; margin-bottom: 0; margin-top: 10px;">Title:</label>
+        <input
+          type="title"
+          class="form-control"
+          id="title"
+          aria-describedby="title"
+          name ="title" required
+        />
+        <label for="recy_type" class="recy_type form-label form-title">Type:</label>
+        <input
+          list = "recy_type"
+          type="text"
+          class="form-control"
+          id="recy_type"
+          name ="recy_type"
+          aria-describedby="recy_type" required
+        />
+        <datalist id="recy_types">
+          <option value="plastic"></option>
+          <option value="wood"></option>
+          <option value="metal"></option>
+          <option value="glass"></option>
+          <option value="other"></option>
+        </datalist>
+        <div class="mb-3">
+          <label for="info" class="info form-label content">Content:</label>
+          <textarea
+            cols="80"
+            rows="10"
+            id="info"
+            class="form-control"
+            type="text"
+            name="textbox" required
+          >
+          </textarea>
+          <label for="img" class="img form-label form-title">img link:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="img"
+            name="img"
+            aria-describedby="title"
+          />
+        </div>
+        <div class="btn-post-container" style=" display: flex; justify-content: center; align-items: center;">
+          <button id = 'submit' type="submit" class="button" value="Post">Post</button>
+        </div>
       </form>
       <div class="recycling" id="recy_posts"></div>
     </main>

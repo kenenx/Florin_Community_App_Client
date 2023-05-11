@@ -58,3 +58,15 @@ form {
   width: 300px;
   background: linear-gradient(#98a24d79, #c6d36573);
 }
+#recy_show{
+    margin-top: 20px;
+    text-align: center;
+    /* margin-left: 8px; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.371);
+    background-color: #f3f3f380;
+}
+#p{
+    padding-top: 10px;
+}
