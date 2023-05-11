@@ -123,5 +123,39 @@ function renderData(data) {
 }
 
 loadComplaints()
+///events////
+async function loadEvents() {
+  try {
+    let user_id = parseInt(localStorage.getItem('userToken'))
+    const response = await fetch(`https://florin-api.onrender.com/users/events/${user_id}`)
+    const data = await response.json()
+    console.log(data)
+    renderEvents(data)
+  } catch (error) {
+    console.log(error)
+  }
+}
 
+function renderEvents(data) {
+  data.forEach((post) => {
+    const { event_title, event_type, event_date, event_content } = post
+
+    const container = document.getElementById('userEvents')
+    const postTitle = document.createElement('p')
+    const postType = document.createElement('p')
+    const postDate = document.createElement('p')
+    const postContent = document.createElement('p')
+
+    postDate.textContent = `Date: ${event_date}`
+    postTitle.textContent = `Title: ${event_title}`
+    postType.textContent = `Type: ${event_type}`
+    postContent.textContent = `${event_content}`
+
+    container.appendChild(postDate)
+    container.appendChild(postTitle)
+    container.appendChild(postType)
+    container.appendChild(postContent)
+  })
+}
+loadEvents()
 
