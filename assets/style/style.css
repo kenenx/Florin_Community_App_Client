@@ -10,6 +10,9 @@
   font-family: 'Kalam', cursive;
   font-family: 'League Spartan', sans-serif;
 }
+body{
+ background-color: #f3f3f3;
+}
 .navbar {
   background: linear-gradient(#98a24d, #c7d165);
 }
@@ -41,3 +44,4 @@
   color: #ffffff;
   border: 1px solid #ffffff;
 }
+
