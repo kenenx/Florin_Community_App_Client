@@ -30,7 +30,8 @@
   margin: 30px;
 }
 #event-btn1,
-#event-btn2 {
+#event-btn2,
+#event-btn3 {
   background: #98a24d;
   border: none;
   color: #ffffff;
@@ -42,7 +43,8 @@
   margin-right: 10px;
 }
 #event-btn1:hover,
-#event-btn2:hover {
+#event-btn2:hover,
+#event-btn3:hover {
   filter: drop-shadow(0.6mm 0.7mm rgb(200, 200, 200));
   transform: translate(0px, -3px) scale(1.05);
 }
