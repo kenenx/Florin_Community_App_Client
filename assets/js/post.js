@@ -106,9 +106,13 @@ function renderData(data) {
 
       inputContainer.classList.add('input-container')
 
-      inputDate.type = 'text'
+      inputDate.type = 'date'
       inputTitle.type = 'text'
       inputContent.type = 'text'
+
+      inputDate.style.width = '30vh'
+      inputDate.style.height = '6vh'
+      inputDate.style.paddingLeft = '10px'
 
       postInfo.appendChild(inputContainer)
 
@@ -182,4 +186,4 @@ viewComplaint()
 //////////////////////////////////////////////////////////
 //for testing
 
-module.exports = {viewComplaint,deletePost,updateEntry}
+module.exports = { viewComplaint, deletePost, updateEntry }

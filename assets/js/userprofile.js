@@ -115,7 +115,7 @@ function renderData(data) {
 
     date.textContent = `Date: ${post_date}`
     postTitle.textContent = `Title: ${title}`
-    postContent.textContent = `Title: ${content}`
+    postContent.textContent = `Details: ${content}`
 
     container.appendChild(date)
     container.appendChild(postTitle)

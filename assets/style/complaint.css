@@ -104,3 +104,26 @@
   text-decoration: none;
   color: #ffffff;
 }
+
+.report {
+  margin-top: 30px;
+
+  font-weight: 900;
+  text-align: center;
+  font-size: 40px;
+}
+.button2 {
+  width: 30vh;
+  height: 5vh;
+  background: #98a24d;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  margin-left: 80px;
+  color: #ffff;
+}
+
+.button2:hover {
+  filter: drop-shadow(0.6mm 0.8mm rgb(200, 200, 200));
+  transform: translate(0px, -3px) scale(1.05);
+}
