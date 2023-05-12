@@ -20,50 +20,13 @@
     <link rel="stylesheet" href="./assets/style/style.css" />
     <title>Mainpage</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid text-center">
-        <a class="navbar-brand" href="./mainpage.html">
-          <img class="logo" src="./assets/images/florinLogo.png" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="./event.html">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./recycling.html">Recycling</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./complaint.html">Complaints</a>
-            </li>
-            <li class="nav-item-userprofile">
-              <a class="nav-link" href="./userprofile.html">Profile</a>
-            </li>
-            <li class="nav-item-userprofile">
-              <a class="nav-link" href="./index.html">Log Out</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+  <body class="main-page">
     <!-- Noticeboard -->
+
     <section class="noticeboard">
       <section class="pics"></section>
       <section class="items">
-        <div class="evePlace">
+        <div class="up">
           <button
             type="button"
             id="eventbtn"
@@ -74,8 +37,6 @@
           >
             Events
           </button>
-        </div>
-        <div class="recPlace">
           <button
             type="button"
             id="recyclebtn"
@@ -86,8 +47,6 @@
           >
             Recycling
           </button>
-        </div>
-        <div class="compPlace">
           <button
             type="button"
             id="complaintsbtn"
@@ -97,6 +56,29 @@
             onclick="goToComData()"
           >
             Complaints
+          </button>
+        </div>
+        <div class="down">
+          <button
+            type="button"
+            id="profileBtn"
+            class="btn btn-primary"
+            type="submit"
+            value="Submit"
+            onclick="goToProfileData()"
+          >
+            Profile
+          </button>
+
+          <button
+            type="button"
+            id="LogoutBtn"
+            class="btn btn-primary"
+            type="submit"
+            value="Submit"
+            onclick="goLogoutData()"
+          >
+            Log Out
           </button>
         </div>
       </section>
