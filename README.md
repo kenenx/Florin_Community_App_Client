@@ -31,8 +31,8 @@ To develop our app, we followed a rigorous planning and delivery process that in
 
 To create a visual representation of the data structure of the application. It helped us to organize and understand the data entities and their relationships. 
 
-(ER![Screenshot 2023-05-12 at 16 11 48](https://github.com/kenenx/Florin_Community_App_Client/assets/112406576/e8fe33f9-79b0-4365-aa67-37678ded015e)
-D) 
+![Screenshot 2023-05-12 at 16 11 48](https://github.com/kenenx/Florin_Community_App_Client/assets/112406576/e8fe33f9-79b0-4365-aa67-37678ded015e)
+
 
 ### Miro 
 
