@@ -116,11 +116,11 @@ function renderData(data) {
 
       postInfo.appendChild(inputContainer)
 
-      editButton.dataset.id = post.comp_id
-
       updateButton.setAttribute('data-bs-toggle', 'modal')
       updateButton.setAttribute('data-bs-target', '#staticBackdrop')
       updateButton.setAttribute('type', 'button')
+
+      editButton.dataset.id = post.comp_id
 
       updateButton.addEventListener('click', () => {
         const data = {
@@ -134,7 +134,7 @@ function renderData(data) {
   })
 }
 
-async function deletePost(id) {
+function deletePost(id) {
   const yesButton = document.querySelector('.yes-button')
   const noButton = document.querySelector('.no-button')
   yesButton.addEventListener('click', async () => {
@@ -157,7 +157,7 @@ async function deletePost(id) {
   })
 }
 
-async function updateEntry(id, data) {
+function updateEntry(id, data) {
   const yes2Button = document.querySelector('.yes2-button')
   const no2Button = document.querySelector('.no2-button')
   yes2Button.addEventListener('click', async () => {
@@ -177,7 +177,7 @@ async function updateEntry(id, data) {
     }
   })
   no2Button.addEventListener('click', () => {
-    return
+    window.location.reload()
   })
 }
 
