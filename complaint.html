@@ -15,7 +15,7 @@
     <script defer src="./assets/js/complaint.js"></script>
     <title>Complaint</title>
   </head>
-  <body>
+  <body class="complaint-page">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid text-center">
         <a class="navbar-brand" href="./mainpage.html">
@@ -64,14 +64,15 @@
           aria-describedby="date"
         />
       </div>
-      <label for="title" class="form-label form-title">Title:</label>
-      <input
-        type="text"
-        class="form-control"
-        id="title"
-        aria-describedby="title"
-      />
-
+      <div class="title-container">
+        <label for="title" class="form-label form-title">Title:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          aria-describedby="title"
+        />
+      </div>
       <div class="mb-3">
         <label for="content" class="form-label content">Content:</label>
         <textarea
@@ -81,15 +82,16 @@
           class="form-control"
           type="text"
           name="textbox"
-        >
-        </textarea>
+        ></textarea>
       </div>
-      <div class="btn-post-container">
+      <div class="button-container">
         <button type="submit" class="button">Submit</button>
-        <button class="button2">
-          <a href="./post.html" class="view-complaints">View Complaints</a>
-        </button>
       </div>
     </form>
+    <div class="button-container2">
+      <button class="button">
+        <a href="./post.html" class="view-complaints">View Complaints</a>
+      </button>
+    </div>
   </body>
 </html>

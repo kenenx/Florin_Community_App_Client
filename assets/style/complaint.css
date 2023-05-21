@@ -1,9 +1,14 @@
+.report {
+  margin-bottom: 60px;
+}
+.complaint-page {
+  overflow-x: hidden;
+}
 #complaints-form {
-  display: flex;
-  flex-direction: column;
-  padding-left: 50px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-  padding-top: 30px;
 }
 .title-date-container {
   display: flex;
@@ -13,14 +18,16 @@
   margin-top: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   gap: 8px;
 }
 
-.title {
-  font-size: 60px;
-  margin-bottom: 50px;
-  padding-left: 50px;
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .form-label {
@@ -55,7 +62,7 @@
   font-size: 20px;
   cursor: pointer;
   border: none;
-  margin-left: 80px;
+
   color: #ffff;
 }
 
@@ -74,8 +81,9 @@
 
 .date-picker {
   display: flex;
-  width: 50%;
   gap: 10px;
+  display: flex;
+  justify-content: start;
 }
 
 .form-post {
@@ -112,18 +120,22 @@
   text-align: center;
   font-size: 40px;
 }
-.button2 {
-  width: 30vh;
-  height: 5vh;
-  background: #98a24d;
-  font-size: 20px;
-  cursor: pointer;
-  border: none;
-  margin-left: 80px;
-  color: #ffff;
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.button2:hover {
-  filter: drop-shadow(0.6mm 0.8mm rgb(200, 200, 200));
-  transform: translate(0px, -3px) scale(1.05);
+.button-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 10px;
+  left: 12px;
+}
+
+.report {
+  text-align: center;
 }
